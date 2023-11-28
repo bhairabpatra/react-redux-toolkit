@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addItem, removeItem, updateItem } from "./ReduxStore/itemsSlice";
 import { fetchData } from "./ReduxStore/asynchronousCall";
 import React, { useEffect } from "react";
-
+import Products from "./prodcut/Products";
 function App() {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.items.items);
@@ -33,6 +33,7 @@ function App() {
   return (
     <div className="App">
       <header className="">
+        <Products />
         <h1>This is the tool kit Example</h1>
         <ul>
           {data.map((item) => (
